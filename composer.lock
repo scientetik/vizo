@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "425b826028219db9a08c32faa5b63799",
+    "hash": "fddbd0466e8f40bb03cf50f0cb0afac9",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -110,29 +110,192 @@
             "time": "2013-11-30 08:25:19"
         },
         {
+            "name": "lusitanian/oauth",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Lusitanian/PHPoAuthLib.git",
+                "reference": "f981b349c03f7e233b7058a9d30903809898659c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Lusitanian/PHPoAuthLib/zipball/f981b349c03f7e233b7058a9d30903809898659c",
+                "reference": "f981b349c03f7e233b7058a9d30903809898659c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "predis/predis": "0.8.*@dev",
+                "symfony/http-foundation": "~2.1"
+            },
+            "suggest": {
+                "ext-openssl": "Allows for usage of secure connections with the stream-based HTTP client.",
+                "predis/predis": "Allows using the Redis storage backend.",
+                "symfony/http-foundation": "Allows using the Symfony Session storage backend."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "OAuth": "src",
+                    "OAuth\\Unit": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Desberg",
+                    "email": "david@daviddesberg.com"
+                },
+                {
+                    "name": "Pieter Hordijk",
+                    "email": "info@pieterhordijk.com",
+                    "homepage": "https://pieterhordijk.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "PHP 5.3+ oAuth 1/2 Library",
+            "keywords": [
+                "Authentication",
+                "authorization",
+                "oauth",
+                "security"
+            ],
+            "time": "2014-03-30 13:50:10"
+        },
+        {
+            "name": "nodge/lightopenid",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nodge/LightOpenID.git",
+                "reference": "a5492cc0c932c557b7e9b54a6e5bbd85cc5fa041"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nodge/LightOpenID/zipball/a5492cc0c932c557b7e9b54a6e5bbd85cc5fa041",
+                "reference": "a5492cc0c932c557b7e9b54a6e5bbd85cc5fa041",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "openid.php",
+                    "provider/provider.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT License"
+            ],
+            "authors": [
+                {
+                    "name": "Mewp",
+                    "homepage": "http://code.google.com/p/lightopenid/"
+                },
+                {
+                    "name": "Ignat Ignatov",
+                    "homepage": "https://github.com/iignatov/LightOpenID"
+                }
+            ],
+            "description": "Lightweight PHP5 library for easy OpenID authentication.",
+            "homepage": "https://github.com/Nodge/LightOpenID",
+            "keywords": [
+                "Authentication",
+                "OpenId"
+            ],
+            "time": "2013-08-31 16:48:56"
+        },
+        {
+            "name": "nodge/yii2-eauth",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nodge/yii2-eauth.git",
+                "reference": "3ae0a4bd0fb0743a645cb3fb28c8388f9031a263"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nodge/yii2-eauth/zipball/3ae0a4bd0fb0743a645cb3fb28c8388f9031a263",
+                "reference": "3ae0a4bd0fb0743a645cb3fb28c8388f9031a263",
+                "shasum": ""
+            },
+            "require": {
+                "lib-curl": "*",
+                "lusitanian/oauth": "~0.3.0",
+                "nodge/lightopenid": "~1.1.0",
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "dev-master@dev"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "bootstrap": "nodge\\eauth\\Bootstrap"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nodge\\eauth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "New BSD License"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Zemskov",
+                    "email": "nodge@yandex.ru",
+                    "homepage": "http://nodge.ru/"
+                }
+            ],
+            "description": "Yii2 EAuth Extension. EAuth allows to authenticate users with accounts on other websites (Google, Facebook, Twitter, etc).",
+            "homepage": "https://github.com/Nodge/yii2-eauth",
+            "keywords": [
+                "Authentication",
+                "OpenId",
+                "eauth",
+                "extension",
+                "oauth",
+                "yii2"
+            ],
+            "time": "2014-04-25 07:21:46"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "d5d580ca7ced89955ce7200f41fb0f97b8f74c60"
+                "reference": "3f9388048e92cc110a6f4b5f6ef7c1f4ca60e84a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/d5d580ca7ced89955ce7200f41fb0f97b8f74c60",
-                "reference": "d5d580ca7ced89955ce7200f41fb0f97b8f74c60",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/3f9388048e92cc110a6f4b5f6ef7c1f4ca60e84a",
+                "reference": "3f9388048e92cc110a6f4b5f6ef7c1f4ca60e84a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9@dev"
+                "mockery/mockery": "~0.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.1-dev"
+                    "dev-master": "5.2-dev"
                 }
             },
             "autoload": {
@@ -161,31 +324,31 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2014-04-13 13:06:08"
+            "time": "2014-05-03 16:23:29"
         },
         {
             "name": "twbs/bootstrap",
-            "version": "v3.0.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "6d03173a1aad98e75f7d33e65b411c519176c59a"
+                "reference": "04028cf6feb62471a3788cd15804e62b9ce890d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6d03173a1aad98e75f7d33e65b411c519176c59a",
-                "reference": "6d03173a1aad98e75f7d33e65b411c519176c59a",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/04028cf6feb62471a3788cd15804e62b9ce890d7",
+                "reference": "04028cf6feb62471a3788cd15804e62b9ce890d7",
                 "shasum": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0.x-dev"
+                    "dev-master": "3.1.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "Apache-2.0"
+                "MIT"
             ],
             "authors": [
                 {
@@ -197,13 +360,19 @@
                     "email": "markdotto@gmail.com"
                 }
             ],
-            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
             "homepage": "http://getbootstrap.com",
             "keywords": [
-                "bootstrap",
-                "css"
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "less",
+                "mobile-first",
+                "responsive",
+                "web"
             ],
-            "time": "2013-12-05 16:09:10"
+            "time": "2014-05-04 09:20:07"
         },
         {
             "name": "yiisoft/jquery",
@@ -260,12 +429,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "3e87245d400a3f284d7ce903bd2100c5b8edac16"
+                "reference": "813e4f50811a86ad0a1fdc87e93da477b29388d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/3e87245d400a3f284d7ce903bd2100c5b8edac16",
-                "reference": "3e87245d400a3f284d7ce903bd2100c5b8edac16",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/813e4f50811a86ad0a1fdc87e93da477b29388d3",
+                "reference": "813e4f50811a86ad0a1fdc87e93da477b29388d3",
                 "shasum": ""
             },
             "require": {
@@ -330,7 +499,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-04-21 18:58:10"
+            "time": "2014-05-04 16:02:06"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -338,16 +507,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "f33c5135ddc8e3173c0715d914263d2ae3042d56"
+                "reference": "24438f64f7b4d8f6de3cb2897d32701aa90044a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/f33c5135ddc8e3173c0715d914263d2ae3042d56",
-                "reference": "f33c5135ddc8e3173c0715d914263d2ae3042d56",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/24438f64f7b4d8f6de3cb2897d32701aa90044a1",
+                "reference": "24438f64f7b4d8f6de3cb2897d32701aa90044a1",
                 "shasum": ""
             },
             "require": {
-                "twbs/bootstrap": "3.0.*",
+                "twbs/bootstrap": "3.1.* | 3.0.*",
                 "yiisoft/yii2": "*"
             },
             "type": "yii2-extension",
@@ -373,7 +542,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2014-04-14 01:22:29"
+            "time": "2014-04-29 07:11:41"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -381,12 +550,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "283ba99f3cc9e0203b1ec507f615a8566dfcecc8"
+                "reference": "10e617fde96144cf9be45b4a96ff5e4c1a141e16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/283ba99f3cc9e0203b1ec507f615a8566dfcecc8",
-                "reference": "283ba99f3cc9e0203b1ec507f615a8566dfcecc8",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/10e617fde96144cf9be45b4a96ff5e4c1a141e16",
+                "reference": "10e617fde96144cf9be45b4a96ff5e4c1a141e16",
                 "shasum": ""
             },
             "require": {
@@ -419,7 +588,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2014-04-14 01:22:29"
+            "time": "2014-04-23 01:25:11"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -427,12 +596,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-swiftmailer.git",
-                "reference": "693092b44f5e6f3b4804f60b64beb85cff74a9cb"
+                "reference": "ca6cfbd4c51f81269b97b6bf068bf35c22f2a6de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/693092b44f5e6f3b4804f60b64beb85cff74a9cb",
-                "reference": "693092b44f5e6f3b4804f60b64beb85cff74a9cb",
+                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/ca6cfbd4c51f81269b97b6bf068bf35c22f2a6de",
+                "reference": "ca6cfbd4c51f81269b97b6bf068bf35c22f2a6de",
                 "shasum": ""
             },
             "require": {
@@ -465,7 +634,7 @@
                 "swiftmailer",
                 "yii2"
             ],
-            "time": "2014-04-14 01:22:29"
+            "time": "2014-04-23 01:25:11"
         }
     ],
     "packages-dev": [
@@ -508,12 +677,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-codeception.git",
-                "reference": "c24979f4500064707d4677e174eed55f708818dd"
+                "reference": "979101cf3d1e5446e7a4f09eb0d813d24eb0e860"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-codeception/zipball/c24979f4500064707d4677e174eed55f708818dd",
-                "reference": "c24979f4500064707d4677e174eed55f708818dd",
+                "url": "https://api.github.com/repos/yiisoft/yii2-codeception/zipball/979101cf3d1e5446e7a4f09eb0d813d24eb0e860",
+                "reference": "979101cf3d1e5446e7a4f09eb0d813d24eb0e860",
                 "shasum": ""
             },
             "require": {
@@ -540,7 +709,7 @@
                 "codeception",
                 "yii2"
             ],
-            "time": "2014-04-17 11:33:07"
+            "time": "2014-04-23 01:25:11"
         },
         {
             "name": "yiisoft/yii2-debug",
@@ -548,12 +717,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "7754f3a151c1dc50d616a1bf37c6019144c6416d"
+                "reference": "1d0d2a02d9651978285013a9449cb54fc5842fa1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/7754f3a151c1dc50d616a1bf37c6019144c6416d",
-                "reference": "7754f3a151c1dc50d616a1bf37c6019144c6416d",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/1d0d2a02d9651978285013a9449cb54fc5842fa1",
+                "reference": "1d0d2a02d9651978285013a9449cb54fc5842fa1",
                 "shasum": ""
             },
             "require": {
@@ -584,7 +753,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2014-04-18 03:33:13"
+            "time": "2014-04-25 19:04:39"
         },
         {
             "name": "yiisoft/yii2-gii",
@@ -592,12 +761,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "8e3dc6ab596b772736a463f5a416f08e6f4f924e"
+                "reference": "53fbc8bb7c6c2aee8fe2b344ba1c4ee65fbc43f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/8e3dc6ab596b772736a463f5a416f08e6f4f924e",
-                "reference": "8e3dc6ab596b772736a463f5a416f08e6f4f924e",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/53fbc8bb7c6c2aee8fe2b344ba1c4ee65fbc43f5",
+                "reference": "53fbc8bb7c6c2aee8fe2b344ba1c4ee65fbc43f5",
                 "shasum": ""
             },
             "require": {
@@ -629,7 +798,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2014-04-19 07:26:52"
+            "time": "2014-05-04 14:16:14"
         }
     ],
     "aliases": [
