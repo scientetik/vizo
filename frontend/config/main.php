@@ -35,7 +35,7 @@ return [
             'rules' => [
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'presentation'],
             ],
-        ],
+        ],        
     ],
     'params' => $params, 
 ];

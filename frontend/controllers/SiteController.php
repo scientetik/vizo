@@ -45,7 +45,7 @@ class SiteController extends Controller
                 'actions' => [
                     'logout' => ['post'],
                 ],
-            ],
+            ],            
         ];
     }
 
@@ -62,7 +62,18 @@ class SiteController extends Controller
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
+            'auth' => [
+                'class' => 'yii\authclient\AuthAction',
+                'successCallback' => [$this, 'authLogin'],
+            ],
         ];
+    }
+    
+    public function authLogin($client)
+    {
+        $attributes = $client->getUserAttributes();
+        // user login or signup comes here
+        \yii\helpers\VarDumper::dump($attributes); die();
     }
 
     public function actionIndex()
@@ -72,6 +83,7 @@ class SiteController extends Controller
 
     public function actionLogin()
     {
+                
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }

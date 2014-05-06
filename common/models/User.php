@@ -27,6 +27,11 @@ class User extends ActiveRecord implements IdentityInterface
     const STATUS_ACTIVE = 10;
 
     const ROLE_USER = 10;
+    
+    /**
+     * @var array EAuth attributes
+     */
+    public $profile;
 
     /**
      * Creates a new user
@@ -69,9 +74,10 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findIdentity($id)
     {
-        return static::findOne($id);
+        return static::findOne($id);        
     }
 
+      
     /**
      * @inheritdoc
      */

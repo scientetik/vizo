@@ -5,6 +5,19 @@ return [
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
-        ],
+        ],       
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection',
+            'clients' => [
+                'google' => [
+                    'class' => 'yii\authclient\clients\GoogleOpenId'
+                ],
+                'facebook' => [
+                    'class' => 'yii\authclient\clients\Facebook',
+                    'clientId' => '*',
+                    'clientSecret' => '*',
+                ],
+            ]
+        ],            
     ],   
 ];
